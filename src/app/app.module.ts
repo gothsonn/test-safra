@@ -8,7 +8,8 @@ import { LogInComponent } from './components/log-in/log-in.component';
 import { AngularMaterialModule } from './angular-material.module';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-
+// Firebase services + enviorment module
+import { environment } from '../environments/environment';
 @NgModule({
   declarations: [
     AppComponent,
