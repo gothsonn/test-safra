@@ -3,9 +3,16 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  apiUrl: 'http://gateway.marvel.com/v1/public/',
+  apiKey: '5a237863b3cc2061003cbbc4fe20dc06',
+  settings: {
+    appErrorPrefix: '[Angular Heroes Error] ',
+    appTitle: 'Angular Heroes',
+    version: '0.0.0',
+    charactersLimit: 20
+  }
 };
-
 /*
  * For easier debugging in development mode, you can import the following file
  * to ignore zone related error stack frames such as `zone.run`, `zoneDelegate.invokeTask`.
