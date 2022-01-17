@@ -1,15 +1,27 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
+
+import { Character } from '../../core/character.model';
+import { ContextService } from '../../core/core.service';
 
 @Component({
   selector: 'app-character-card',
-  templateUrl: './character-card.component.html',
-  styleUrls: ['./character-card.component.scss']
+  templateUrl: './character-card.component.html'
 })
-export class CharacterCardComponent implements OnInit {
+export class CharacterCardComponent {
 
-  constructor() { }
+  @Input() character: Character | undefined;
+  @Output() selectedChange = new EventEmitter<Character>();
 
-  ngOnInit(): void {
+  constructor(private contextService: ContextService) {}
+
+  getCharacterImage(): string | undefined {
+    if (this.character) {
+      return this.contextService.getImage('landscape_incredible', this.character.thumbnail);
+    }
+  }
+
+  showCharacter() {
+    this.selectedChange.emit(this.character);
   }
 
 }
