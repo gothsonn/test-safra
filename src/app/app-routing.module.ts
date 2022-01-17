@@ -1,10 +1,30 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { LogInComponent } from './components/log-in/log-in.component';
+import {
+  canActivate,
+  redirectLoggedInTo,
+  redirectUnauthorizedTo,
+} from '@angular/fire/auth-guard';
+
+const redirectUnauthorizedToLogin = () => redirectUnauthorizedTo(['']);
+const redirectLoggedInToHome = () => redirectLoggedInTo(['dashboard']);
 
 const routes: Routes = [
-  {path:'',pathMatch:'full', redirectTo:'login'},
-  {path:'login',component: LogInComponent}
+  {
+    path:'',
+    loadChildren:()=> import('./auth/auth.module').then((m) => m.AuthModule),
+    ...canActivate(redirectLoggedInToHome),
+  },
+  {
+    path:'dashboard',
+    loadChildren:()=> import('./characters/characters.module').then((m)=>m.CharactersModule),
+    ...canActivate(redirectUnauthorizedToLogin),
+  },
+  {
+    path: '**',
+    redirectTo: '',
+    pathMatch: 'full',
+  },
 ];
 
 @NgModule({

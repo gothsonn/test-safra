@@ -1,0 +1,17 @@
+<div class="background">
+    <div class="login-container">
+      <div class="form-container">
+        <h1>Faça o seu cadastro</h1>
+        <h5>Registre-se com seu e-mail e senha</h5>
+        <app-login-form (formData)="register($event)" labelButton='Registrar'></app-login-form>
+      </div>
+      <div class="text-container">
+        <h1>Olá</h1>
+        <p>
+            Já tem uma conta? Vá em frente e clique no botão abaixo para
+            entrar!
+        </p>
+        <button mat-button routerLink="/">Acessar</button>
+      </div>
+    </div>
+  </div>
