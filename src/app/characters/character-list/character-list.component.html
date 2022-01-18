@@ -9,11 +9,11 @@
       </mat-tab>
     </mat-tab-group>
   </mat-drawer>
-  <mat-drawer-content>
+  <mat-drawer-content >
     <mat-progress-bar mode="indeterminate" *ngIf="showProgress"></mat-progress-bar>
     <div class="search">
       <mat-form-field>
-        <input matInput placeholder="Search by name" #searchBox (keyup)="search(searchBox.value)">
+        <input matInput placeholder="Pesquisa" #searchBox (keyup)="search(searchBox.value)"  >
         <button *ngIf="searchBox?.value" matSuffix mat-icon-button aria-label="Clear" (click)="searchBox.value = ''">
           <mat-icon>close</mat-icon>
         </button>

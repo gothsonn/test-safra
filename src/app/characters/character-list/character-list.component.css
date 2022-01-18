@@ -1,5 +1,7 @@
 mat-grid-list {
+  padding: 20px;
   margin: 40px;
+
 }
 
 mat-grid-tile {
@@ -22,9 +24,24 @@ mat-drawer {
   background-size: 320px 57px;
   background-position-x: 20px;
   background-position-y: 45px;
+  margin-left: 20px;
+
 }
 
 .mat-drawer-container {
-  background: transparent;
+  background-image: url("/assets/AVENGERS.jpg") ;
+  display: table;
+  width: 100%;
   height: 100%;
+  background-position: 30% 45%;
+  background-color: white;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  -o-background-size: cover;
+}
+.center-block {
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
 }
