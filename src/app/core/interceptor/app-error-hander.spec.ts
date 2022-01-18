@@ -1,7 +1,7 @@
 import { TestBed } from '@angular/core/testing';
 import { MatSnackBar } from '@angular/material/snack-bar';
+import { environment } from 'src/environments/environment';
 
-import { environment } from '../environments/environment';
 import { AppErrorHandler } from './app-error-handler';
 
 describe(AppErrorHandler.name, () => {
