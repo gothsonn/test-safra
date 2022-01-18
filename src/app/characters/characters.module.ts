@@ -14,7 +14,9 @@ import { ComicsModule } from '../comics/comics.module';
 import { CharacterCardComponent } from './character-card/character-card.component';
 import { CharacterDetailComponent } from './character-detail/character-detail.component';
 import { CharacterListComponent } from './character-list/character-list.component';
+import { characterRoutingModule } from './character-routing.module';
 
+import { HttpClientModule, HttpClient } from '@angular/common/http';
 @NgModule({
   imports: [
     ComicsModule,
@@ -27,7 +29,10 @@ import { CharacterListComponent } from './character-list/character-list.componen
     MatInputModule,
     MatProgressBarModule,
     MatSidenavModule,
-    MatTabsModule
+    MatTabsModule,
+    characterRoutingModule,
+    HttpClientModule, 
+
   ],
   declarations: [
     CharacterCardComponent,

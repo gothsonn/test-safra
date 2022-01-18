@@ -17,7 +17,7 @@ const routes: Routes = [
   },
   {
     path:'dashboard',
-    loadChildren:()=> import('./characters/characters.module').then((m)=>m.CharactersModule),
+    loadChildren:()=> import('./characters/characters.module').then((m)=>m.CharacterModule),
     ...canActivate(redirectUnauthorizedToLogin),
   },
   {

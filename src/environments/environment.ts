@@ -5,7 +5,7 @@
 export const environment = {
   production: false,
   apiUrl: 'http://gateway.marvel.com/v1/public/',
-  apiKey: '',
+  apiKey: '6270363ed95e5211c65590b4f2e42571',
   settings: {
     appErrorPrefix: '[Angular Heroes Error] ',
     appTitle: 'Angular Heroes',
@@ -13,7 +13,7 @@ export const environment = {
     charactersLimit: 20
   },
   firebaseConfig: {
-    apiKey: "",
+    apiKey: "AIzaSyDYcW5Rx8xEBgO8wj7p_rw7S5ZtOBvoPRY",
     authDomain: "test-solutis.firebaseapp.com",
     projectId: "test-solutis",
     storageBucket: "test-solutis.appspot.com",

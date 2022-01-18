@@ -17,7 +17,7 @@ export class ComicDetailComponent {
 
   constructor(private contextService: ContextService) {}
 
-  getComicImage(): string | undefined {
+  getComicImage(): any {
     if (this.comic) {
       return this.contextService.getImage('portrait_fantastic', this.comic.thumbnail);
     }
