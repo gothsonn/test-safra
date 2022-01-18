@@ -4,19 +4,14 @@ import { CharacterListComponent } from './character-list/character-list.componen
 
 
 const routes: Routes = [
-{
-path: '',
-component: CharacterListComponent,
-},
+    {
+        path: '',
+        component: CharacterListComponent,
+    },
 ];
 
 @NgModule({
-imports: [
-RouterModule.forRoot(routes)
-],
-exports: [
-RouterModule
-],
-declarations: []
-})
+    imports: [RouterModule.forChild(routes)],
+    exports: [RouterModule]
+  })
 export class characterRoutingModule { }

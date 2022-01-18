@@ -5,7 +5,7 @@
 export const environment = {
   production: false,
   apiUrl: 'http://gateway.marvel.com/v1/public/',
-  apiKey: '6270363ed95e5211c65590b4f2e42571',
+  apiKey: '5a237863b3cc2061003cbbc4fe20dc06',
   settings: {
     appErrorPrefix: '[Angular Heroes Error] ',
     appTitle: 'Angular Heroes',
@@ -18,9 +18,9 @@ export const environment = {
     projectId: "test-solutis",
     storageBucket: "test-solutis.appspot.com",
     messagingSenderId: "309300264176",
-    appId: ""
+    appId: "1:309300264176:web:aa4fd311e84f9e6baa1635"
   }
-};
+}
 /*
  * For easier debugging in development mode, you can import the following file
  * to ignore zone related error stack frames such as `zone.run`, `zoneDelegate.invokeTask`.

@@ -9,6 +9,7 @@ export class AuthInterceptor implements HttpInterceptor {
 
   intercept(req: HttpRequest<any>, next: HttpHandler): Observable<HttpEvent<any>> {
     const authReq = req.clone({ params: req.params.set('apikey', environment.apiKey) });
+    console.log(authReq, 'rafael enrolado ');
     return next.handle(authReq);
   }
 
